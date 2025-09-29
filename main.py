@@ -8,18 +8,20 @@ def get_book_text(book_file):
 def main():
     book = "books/frankenstein.txt"
     
-    
-    print(word_count(book))
-    
     book_dict = char_count(book)
     book_dict_list = dict_list(book_dict)
     book_dict_list.sort(reverse=True, key=sort_on)
-    
+    dict_access_key = 0 #will use this to set the position in the dictionay list
+  
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")  
+    print(word_count(book))
+    print("--------- Character Count -------")
     for ltr_dict in book_dict_list:
-        dict_access_key = 0 #will use this to set the position in the dictionay list
-        print(f"{book_dict_list[dict_access_key]['char']}: {book_dict_list[dict_access_key]['num']}/n")
+        print(f"{book_dict_list[dict_access_key]['char']}: {book_dict_list[dict_access_key]['num']}")
         dict_access_key +=1
-    
+    print("============= END ===============")
 
 if __name__ == "__main__":
     main()

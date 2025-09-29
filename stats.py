@@ -1,7 +1,7 @@
 def word_count(book_file):
     with open(book_file) as f:
         book_contents = f.read()
-        return (f"{len(book_contents.split())} words found in the document")
+        return (f"Found {len(book_contents.split())} total words")
         
 def char_count(book_file):
     ltr_cnt_dict = {}

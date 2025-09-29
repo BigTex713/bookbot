@@ -22,8 +22,8 @@ def dict_list(char_dict):
     for ltr in char_dict:
         blnk_dict = {}
             
-        blnk_dict[char] = ltr
-        blnk_dict[num] = char_dict[ltr]
+        blnk_dict["char"] = ltr
+        blnk_dict["num"] = char_dict[ltr]
             
         new_dict_list.append(blnk_dict)
     

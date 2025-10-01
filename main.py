@@ -7,17 +7,16 @@ def get_book_text(book_file):
         print(book_contents)
         
 def main():
+    
     args = sys.argv
-    print(sys.argv)
     
-    book = args
-    
-    if len(book) == 1:
+    if len(args) == 1:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
         
-    else:       
-        book_dict = char_count(book[1])
+    else:
+        book = args[1]       
+        book_dict = char_count(book)
         book_dict_list = dict_list(book_dict)
         book_dict_list.sort(reverse=True, key=sort_on)
         dict_access_key = 0 #will use this to set the position in the dictionay list
@@ -25,7 +24,7 @@ def main():
 
 
         print("============ BOOKBOT ============")
-        print("Analyzing book found at books/frankenstein.txt...")
+        print(f"Analyzing book found at {book}...")
         print("----------- Word Count ----------")  
         print(word_count(book))
         print("--------- Character Count -------")

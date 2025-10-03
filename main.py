@@ -7,7 +7,7 @@ def get_book_text(book_file):
         print(book_contents)
         
 def main():
-    
+    #sys.argv is used to pull in the book value 
     args = sys.argv
     
     if len(args) == 1:
